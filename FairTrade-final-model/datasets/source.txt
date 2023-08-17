@@ -1,1 +1,7 @@
+Adult, Bank, Default, KDD [1]
+Law [2]
 
+[1] Bache, K.; and Lichman, M. 2013. UCI machine learning
+repository.
+[2] Wightman, L. F. 1998. LSAC National Longitudinal Bar
+Passage Study. LSAC Research Report Series. ERIC.
