@@ -1,6 +1,6 @@
 Adult, Bank, Default, KDD [1]
 Law [2]
-Note: Please unzip "kdd.csv.zip" file before excuting the code.
+Note: Please unzip "kdd.csv.zip" file before executing the code.
 
 
 [1] Bache, K.; and Lichman, M. 2013. UCI machine learning
