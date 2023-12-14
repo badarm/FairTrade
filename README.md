@@ -6,7 +6,29 @@ As Federated Learning (FL) gains prominence in distributed machine learning appl
 * [Default](https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients)
 * [Law School](https://github.com/iosifidisvasileios/FABBOO/blob/master/Data/law_dataset.arff)
 ## Code
+### Dataset Processing Scripts
 
+The `datasets` directory contains all the datasets used in this project. Below is a description of python scripts written to process datasets:
+
+- `load_data_utilities.py`: Utility script for loading and preprocessing all the datasets (Adult, Bank, Default, Law).
+
+### Utility Scripts
+- `utilities.py`: Utility script for computing evaluation metrics including 'statistical parity', average treatment effect (ATE), balanced accuracy, and accuracy.
+
+### FAC-Fed main scripts
+The following scripts constitute the complete methodology of FAC-Fed
+- `Fairtrade-crypten.py`: Main script for the 'FairTrade' framework that orchestrates the fairness aware federated learning process on different datasets with secure multiparty protocol.
+- `Fairtrade.py`: Main script for the 'FairTrade' framework that orchestrates the fairness aware federated learning process on different datasets without secure multiparty protocol.
+
+- `constraint.py`: The script contains the implementation of fairness constraints for discrimination mitigation.
+  
+## Running the facfed_main.py Script
+
+To run the `facfed_main.py` script with the default settings, you can use the following command:
+
+```bash
+python facfed_main.py --num_clients 3 --fairness_notion 'stp_score' --dataset_name 'bank' --distribution 'attr'
+```
 
 ## Prerequisites
 
