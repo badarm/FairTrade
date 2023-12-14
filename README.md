@@ -6,3 +6,29 @@ As Federated Learning (FL) gains prominence in distributed machine learning appl
 * [Default](https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients)
 * [Law School](https://github.com/iosifidisvasileios/FABBOO/blob/master/Data/law_dataset.arff)
 ## Code
+
+
+## Prerequisites
+
+Before running the script, ensure you have the following Python libraries installed:
+
+- torch==2.0.1
+- torchvision==0.15.2
+- scikit-learn==0.24.2
+- pandas==1.5.3
+- gpytorch==1.10
+- botorch==0.8.5
+- crypten==0.4.1
+- cvxopt==1.3.1
+- cvxpy==1.3.2
+
+## Citation Request
+If you find this work useful in your research, please consider citing:
+```bash
+@inproceedings{badar2024fairtrade,
+  title={FairTrade: Achieving Pareto-Optimal Trade-offs Between Balanced Accuracy and Fairness in Federated Learning},
+  author={Badar, Maryam and Sikdar, Sandipan and Nejdl, Wolfgang and Fisichella, Marco},
+  booktitle={Proceedings of the International AAAI Conference on Web and Social Media},
+  year={2024}
+}
+```
