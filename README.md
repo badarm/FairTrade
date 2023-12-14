@@ -15,20 +15,21 @@ The `datasets` directory contains all the datasets used in this project. Below i
 ### Utility Scripts
 - `utilities.py`: Utility script for computing evaluation metrics including 'statistical parity', average treatment effect (ATE), balanced accuracy, and accuracy.
 
-### FAC-Fed main scripts
-The following scripts constitute the complete methodology of FAC-Fed
+### FairTrade main scripts
+The following scripts constitute the complete methodology of FairTrade
 - `Fairtrade-crypten.py`: Main script for the 'FairTrade' framework that orchestrates the fairness aware federated learning process on different datasets with secure multiparty protocol.
 - `Fairtrade.py`: Main script for the 'FairTrade' framework that orchestrates the fairness aware federated learning process on different datasets without secure multiparty protocol.
 
 - `constraint.py`: The script contains the implementation of fairness constraints for discrimination mitigation.
   
-## Running the facfed_main.py Script
+## Running the FairTrade-crypten.py Script
 
 To run the `FairTrade-crypten.py` script with the default settings, you can use the following command:
 
 ```bash
 python FairTrade-crypten.py --fairness_notion 'stat_parity' --num_clients 3 --dataset_name 'bank' --epochs 15 --communication_rounds 50 --mobo_optimization_rounds 10 --distribution_type 'random'
 ```
+## Running the FairTrade.py Script
 To run the `FairTrade.py` script with the default settings, you can use the following command:
 
 ```bash
