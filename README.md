@@ -54,7 +54,7 @@ If you find this work useful in your research, please consider citing:
 @inproceedings{badar2024fairtrade,
   title={FairTrade: Achieving Pareto-Optimal Trade-offs Between Balanced Accuracy and Fairness in Federated Learning},
   author={Badar, Maryam and Sikdar, Sandipan and Nejdl, Wolfgang and Fisichella, Marco},
-  booktitle={Proceedings of the International AAAI Conference on Web and Social Media},
+  booktitle={Proceedings of the 38th Annual AAAI Conference on Artificial Intelligence},
   year={2024}
 }
 ```
