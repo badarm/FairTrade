@@ -24,12 +24,16 @@ The following scripts constitute the complete methodology of FAC-Fed
   
 ## Running the facfed_main.py Script
 
-To run the `facfed_main.py` script with the default settings, you can use the following command:
+To run the `FairTrade-crypten.py` script with the default settings, you can use the following command:
 
 ```bash
-python facfed_main.py --num_clients 3 --fairness_notion 'stp_score' --dataset_name 'bank' --distribution 'attr'
+python FairTrade-crypten.py --fairness_notion 'stat_parity' --num_clients 3 --dataset_name 'bank' --epochs 15 --communication_rounds 50 --mobo_optimization_rounds 10 --distribution_type 'random'
 ```
+To run the `FairTrade.py` script with the default settings, you can use the following command:
 
+```bash
+python FairTrade.py --fairness_notion 'stat_parity' --num_clients 3 --dataset_name 'bank' --epochs 15 --communication_rounds 50 --mobo_optimization_rounds 10 --distribution_type 'random'
+```
 ## Prerequisites
 
 Before running the script, ensure you have the following Python libraries installed:
