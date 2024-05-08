@@ -255,7 +255,11 @@ for round in range(communication_rounds):
     alpha = torch.tensor([100], dtype=torch.float32)
     alpha = alpha.view(1, -1)
 
-    objectives = evaluate(alpha)
+    #objectives = evaluate(alpha)
+    if round == 0:
+        objectives, bal_acc_, fairness_notion_ = evaluate(alpha)
+    else:
+        objectives, bal_acc_, fairness_notion_ = evaluate(updated_alpha, updated_lr)
     fairness_notion_list.append(objectives[0,0].item())
     bal_acc_list.append(objectives[0,1].item())
     
@@ -301,6 +305,23 @@ for round in range(communication_rounds):
                 print("bismillah")
                 train_y = torch.cat([m.train_targets, new_objectives[:,i]])
                 m.set_train_data(train_x, train_y, strict=False)
+                if i == 0:
+                    train_y_0 = train_y
+                else:
+                    train_y_1 = train_y
+        train_y_all = torch.stack((train_y_0, train_y_1), dim=1)
+        weights = torch.tensor([0.6, 0.4])
+        weighted_sums = (train_y_all * weights).sum(dim=1)
+
+        # Find the index of the best solution based on the highest weighted sum
+        best_solution_idx = weighted_sums.argmax()
+        best_solution = train_y_all[best_solution_idx]
+
+        print(f"Best solution based on weighted sum: {best_solution}")
+
+        # Select the corresponding row in train_x using the best_solution_idx
+        best_train_x = train_x[best_solution_idx]
+        updated_alpha, updated_lr = best_train_x.tolist()
 
     # Now both models have the same parameters and we can continue with the next round of communication
 
